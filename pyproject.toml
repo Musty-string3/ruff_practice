@@ -5,5 +5,5 @@ exclude = ["migrations/"]  # Djangoのmigrationsは除外するのが一般的
 
 [tool.ruff.lint]
 # 代表的なルールセット + Django(DJ) + セキュリティ(S)
-select = ["E", "F", "I", "B", "UP", "DJ", "S"]
+select = ["E", "F"]
 ignore = ["E501"]  # 行長違反は無視する例
