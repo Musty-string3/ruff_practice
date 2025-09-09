@@ -1,0 +1,7 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9   # 使いたいバージョン
+    hooks:
+      - id: ruff
+        args: []   # ! 自動修正はさせない
+      # - id: ruff-format # Black 相当の整形
