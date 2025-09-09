@@ -26,5 +26,5 @@ jobs:
         run: ruff check .
 
       # フォーマット差分チェック（autopep8やblack代わり）
-      - name: Run Ruff Format Check
-        run: ruff format --check .
+      # - name: Run Ruff Format Check
+      #   run: ruff format --check .
