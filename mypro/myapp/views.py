@@ -41,6 +41,7 @@ class PostsView(View):
                 return redirect("myapp:posts")
 
             print(title, text, immmg)
+            print(title, text, immmggggg)
             Post.objects.create(title=title, text=text, img=img)
             request.session["message"] = "記事の作成に成功しました。"
 
