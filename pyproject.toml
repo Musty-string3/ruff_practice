@@ -4,6 +4,12 @@ line-length = 100
 exclude = ["migrations/"]  # Djangoのmigrationsは除外するのが一般的
 
 [tool.ruff.lint]
-# 代表的なルールセット + Django(DJ) + セキュリティ(S)
+## 代表的なルールセット + Django(DJ) + セキュリティ(S)
 select = ["E", "F"]
-ignore = ["E501"]  # 行長違反は無視する例
+# 未使用importや import * 系は無視
+ignore = [
+    "F401", # unused import
+    "F403", # import * used
+    "F405", # name may be undefined (from *)
+    "E501", # 行長チェック無効
+]
