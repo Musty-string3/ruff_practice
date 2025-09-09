@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.db.models import Count
 
-from django.http import JsonResponse, HttpResponse
+# from django.http import JsonResponse, HttpResponse
 
 from .models import *
 
@@ -40,7 +40,7 @@ class PostsView(View):
                 request.session["message"] = "失敗"
                 return redirect("myapp:posts")
 
-            print(title, text, immg)
+            print(title, text, immmg)
             Post.objects.create(title=title, text=text, img=img)
             request.session["message"] = "記事の作成に成功しました。"
 
