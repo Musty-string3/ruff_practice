@@ -1,0 +1,9 @@
+[tool.ruff]
+target-version = "py311"   # プロジェクトのPythonバージョンに合わせる
+line-length = 100
+exclude = ["migrations/"]  # Djangoのmigrationsは除外するのが一般的
+
+[tool.ruff.lint]
+# 代表的なルールセット + Django(DJ) + セキュリティ(S)
+select = ["E", "F", "I", "B", "UP", "DJ", "S"]
+ignore = ["E501"]  # 行長違反は無視する例

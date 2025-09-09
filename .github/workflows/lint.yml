@@ -1,0 +1,30 @@
+name: Lint with Ruff
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  ruff:
+    runs-on: ubuntu-latest
+
+    steps:
+      # リポジトリを取得
+      - uses: actions/checkout@v4
+
+      # Python環境をセットアップ
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"  # プロジェクトのPythonバージョンに合わせて
+
+      # Ruff をインストール
+      - name: Install Ruff
+        run: pip install ruff
+
+      # Lint チェック（スタイル違反があると失敗する）
+      - name: Run Ruff Lint
+        run: ruff check .
+
+      # フォーマット差分チェック（autopep8やblack代わり）
+      - name: Run Ruff Format Check
+        run: ruff format --check .
