@@ -6,10 +6,11 @@ exclude = ["migrations/"]  # Djangoのmigrationsは除外するのが一般的
 [tool.ruff.lint]
 ## 代表的なルールセット + Django(DJ) + セキュリティ(S)
 select = ["E", "F"]
+
 # 未使用importや import * 系は無視
 ignore = [
     "F401", # unused import
-    "F403", # import * used
-    "F405", # name may be undefined (from *)
+    # "F403", # import * used
+    # "F405", # name may be undefined (from *)
     "E501", # 行長チェック無効
 ]
