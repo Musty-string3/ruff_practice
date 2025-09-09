@@ -4,7 +4,7 @@ from django.db.models import Count
 
 # from django.http import JsonResponse, HttpResponse
 
-from .models import *
+from .models import Post, Like
 
 
 class PostsView(View):
